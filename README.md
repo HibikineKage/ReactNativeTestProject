@@ -50,6 +50,7 @@ yarn web-start
 
 * Web build
 * HMR
+* Deploy
 
 ## License
 
