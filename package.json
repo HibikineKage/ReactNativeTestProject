@@ -1,0 +1,8 @@
+{
+  "name": "TestProject",
+  "version": "1.0.0",
+  "main": "src/index.tsx",
+  "repository": "https://github.com/Hibikine/ReactNativeTestProject",
+  "author": "Hibikine Kage",
+  "license": "MIT"
+}
