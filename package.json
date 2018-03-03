@@ -1,8 +1,68 @@
 {
   "name": "TestProject",
-  "version": "1.0.0",
-  "main": "src/index.tsx",
-  "repository": "https://github.com/Hibikine/ReactNativeTestProject",
-  "author": "Hibikine Kage",
-  "license": "MIT"
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android": "node node_modules/react-native/local-cli/cli.js run-android",
+    "test": "jest",
+    "prebuild": "rm -rf build",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "react": "16.3.0-alpha.1",
+    "react-native": "0.54.0",
+    "react-redux": "^5.0.7",
+    "recompose": "^0.26.0",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-promise": "^0.5.3",
+    "typescript": "^2.7.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.0.0-beta.40",
+    "@types/jest": "^22.1.4",
+    "@types/react": "^16.0.40",
+    "@types/react-native": "^0.52.16",
+    "@types/react-redux": "^5.0.15",
+    "@types/react-test-renderer": "^16.0.1",
+    "@types/recompose": "^0.24.5",
+    "@types/redux-promise": "^0.5.28",
+    "babel-jest": "22.4.1",
+    "babel-preset-react-native": "4.0.0",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.18.2",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-typescript": "^0.9.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.2",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1",
+    "react-test-renderer": "^16.2.0",
+    "ts-loader": "^4.0.1",
+    "ts-node": "^5.0.1",
+    "typescript-eslint-parser": "^14.0.0",
+    "webpack": "^4.0.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": ["prettier --parser typescript --write", "eslint", "git add"],
+    "*.{js,jsx}": ["prettier --write", "eslint", "git add"],
+    "*.{css,scss}": ["prettier --write", "git add"],
+    "*.json": ["prettier --write", "git add"],
+    "*.md": ["prettier --write", "git add"]
+  }
 }

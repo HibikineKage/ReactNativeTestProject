@@ -1,0 +1,9 @@
+{
+  "extends": ["prettier"],
+  "parser": "typescript-eslint-parser",
+  "plugins": ["typescript"],
+  "rules": { "prettier/prettier": "error" },
+  "env": {
+    "es6": true
+  }
+}
